@@ -23,9 +23,6 @@
         <item name="android:windowContentTransitions">true</item>
 
         <item name="android:windowExitTransition">@transition/main_exit</item>
-
-        <item name="android:windowSharedElementExitTransition">
-            @transition/change_image_transform</item>
     </style>
 
     <style name="Theme.Bacon.Detail">

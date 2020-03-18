@@ -145,12 +145,6 @@ public class ArticleDetailFragment extends Fragment implements
             }
         });
 
-        Slide slide = new Slide(Gravity.BOTTOM);
-        slide.addTarget(mScrollView);
-        slide.setInterpolator(AnimationUtils.loadInterpolator(getActivity(), android.R.interpolator.linear_out_slow_in));
-        slide.setDuration(1000);
-        getActivity().getWindow().setEnterTransition(slide);
-
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
         mPhotoContainerView = mRootView.findViewById(R.id.photo_container);
 
