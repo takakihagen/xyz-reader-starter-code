@@ -108,6 +108,10 @@ public class ArticleDetailActivity extends AppCompatActivity
         }
     }
 
+    public int getTopInset(){
+        return mTopInset;
+    }
+
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         return ArticleLoader.newAllArticlesInstance(this);
@@ -155,7 +159,8 @@ public class ArticleDetailActivity extends AppCompatActivity
 
     private void updateUpButtonPosition() {
         int upButtonNormalBottom = mTopInset + mUpButton.getHeight();
-        mUpButton.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
+        //mUpButton.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
+        mUpButton.setTranslationY(0);
     }
 
     private class MyPagerAdapter extends FragmentStatePagerAdapter {

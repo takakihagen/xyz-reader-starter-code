@@ -173,7 +173,7 @@ public class ArticleListActivity extends AppCompatActivity implements
                 public void onClick(View view) {
                     Context context = parent.getContext();
                     Bundle bundle = ActivityOptionsCompat
-                            .makeSceneTransitionAnimation((Activity) context)
+                            .makeSceneTransitionAnimation((Activity) context, vh.thumbnailView, getString(R.string.shared_elment))
                             .toBundle();
                     Intent intent = new Intent(Intent.ACTION_VIEW,
                             ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition())));
