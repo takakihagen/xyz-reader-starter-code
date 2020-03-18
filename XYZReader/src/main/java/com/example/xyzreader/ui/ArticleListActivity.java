@@ -64,8 +64,8 @@ public class ArticleListActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_article_list);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(mToolbar);
-        //getSupportActionBar().setDisplayShowTitleEnabled(false);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         final View toolbarContainerView = findViewById(R.id.toolbar_container);
 
@@ -108,7 +108,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         int id = item.getItemId();
 
         if(id == R.id.refresh){
-            updateRefreshingUI();
+            refresh();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -144,6 +144,8 @@ public class ArticleListActivity extends AppCompatActivity implements
         StaggeredGridLayoutManager sglm =
                 new StaggeredGridLayoutManager(columnCount, StaggeredGridLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(sglm);
+        adapter.notifyDataSetChanged();
+        mRecyclerView.scheduleLayoutAnimation();
     }
 
     @Override
