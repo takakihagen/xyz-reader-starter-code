@@ -298,7 +298,7 @@ public class ArticleDetailFragment extends Fragment implements
 
         // account for parallax
         return mIsCard
-                ? (int) mPhotoContainerView.getTranslationY() + mPhotoView.getHeight() - mScrollY
-                : mPhotoView.getHeight() - mScrollY;
+                ? (int) mPhotoContainerView.getTranslationY() + (int) getActivity().getResources().getDimension(R.dimen.detail_card_top_margin) - mScrollY
+                : (int) getActivity().getResources().getDimension(R.dimen.detail_card_top_margin) - mScrollY;
     }
 }
