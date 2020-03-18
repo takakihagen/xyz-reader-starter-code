@@ -177,7 +177,7 @@ public class ArticleListActivity extends ActionBarActivity implements
                             .toBundle();
                     Intent intent = new Intent(Intent.ACTION_VIEW,
                             ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition())));
-                    context.startActivity(intent , bundle);
+                    startActivity(intent , bundle);
                 }
             });
             return vh;
