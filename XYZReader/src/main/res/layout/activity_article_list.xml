@@ -22,17 +22,18 @@
             android:layoutAnimation="@anim/layout_animation_slide"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
-    <FrameLayout
+    <android.support.design.widget.AppBarLayout
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
         android:layout_height="78dp"
         android:background="@color/theme_primary"
-        android:elevation="8dp">
+        android:elevation="8dp"
+        android:paddingTop="20dp">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginLeft="@dimen/list_toolbar_side_margin"
             android:layout_marginRight="@dimen/list_toolbar_side_margin"
@@ -44,8 +45,7 @@
                 android:layout_gravity="center"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/logo" />
-
         </android.support.v7.widget.Toolbar>
-    </FrameLayout>
+    </android.support.design.widget.AppBarLayout>
 
 </android.support.design.widget.CoordinatorLayout>
